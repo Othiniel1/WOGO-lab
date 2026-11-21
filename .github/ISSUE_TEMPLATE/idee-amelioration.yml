@@ -1,0 +1,67 @@
+name: "Idée / amélioration · Idea / improvement"
+description: "Proposer une idée produit, un axe UI/UX, parcours ou sécurité / Propose a product idea, UI/UX, flow or security improvement"
+title: "[Idée] "
+labels: ["idée"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Une seule idée par issue, formulée du point de vue de l'utilisateur.
+        *One idea per issue, written from the user's point of view.*
+
+        ⚠️ Faille de sécurité : **ne pas ouvrir d'issue** → voir [SECURITY.md](../SECURITY.md).
+        *Security vulnerability: **do not open an issue** → see [SECURITY.md](../SECURITY.md).*
+
+  - type: dropdown
+    id: axe
+    attributes:
+      label: "Axe / Area"
+      options:
+        - "UI/UX — interface et lisibilité / UI/UX — interface and readability"
+        - "Parcours — étapes et gestes / Flow — steps and gestures"
+        - "Sécurité — confiance et preuves / Security — trust and evidence"
+        - "Séquestre — règles de libération et litige / Escrow — release and dispute rules"
+        - "Accessibilité / Accessibility"
+        - "Autre / Other"
+    validations:
+      required: true
+
+  - type: input
+    id: probleme
+    attributes:
+      label: "Problème constaté / Problem observed"
+      description: "En une phrase : qui est gêné, et quand ? / In one sentence: who is affected, and when?"
+      placeholder: "Un vendeur sans smartphone récent ne peut pas confirmer la réception. / A seller without a recent smartphone cannot confirm delivery."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposition
+    attributes:
+      label: "Proposition / Proposal"
+      description: "Ce que vous feriez concrètement. / What you would actually do."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives envisagées / Alternatives considered"
+      description: "Facultatif : autres solutions, et pourquoi elles sont moins bonnes. / Optional: other options and why they are weaker."
+
+  - type: textarea
+    id: mesure
+    attributes:
+      label: "Comment mesurer le succès / How to measure success"
+      description: "Un indicateur simple, même qualitatif. / One simple indicator, even qualitative."
+      placeholder: "Moins de 5 % de billets expirés sans confirmation. / Fewer than 5% of tickets expiring without confirmation."
+
+  - type: checkboxes
+    id: regles
+    attributes:
+      label: "Avant d'envoyer / Before submitting"
+      options:
+        - label: "Je n'ai inclus ni donnée personnelle réelle, ni secret, ni code de `WOGO-Origin`. / I included no real personal data, secret or `WOGO-Origin` code."
+          required: true
+        - label: "J'accepte que cette idée soit réutilisée par WOGO sans contrepartie. / I accept that this idea may be reused by WOGO with no compensation."
+          required: true

@@ -1,0 +1,16 @@
+# Secrets et configuration locale — ne jamais commiter
+.env
+.env.*
+!.env.example
+.dev.vars
+*.pem
+*.key
+*.p12
+*.keystore
+
+# Système et éditeurs
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

@@ -1,0 +1,95 @@
+name: "Retour UI/UX · UI/UX feedback"
+description: "Signaler un écran, un geste ou un libellé à corriger / Report a screen, gesture or label to fix"
+title: "[UI/UX] "
+labels: ["ui/ux"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de décrire **un seul** point par issue. Répondez en français ou en anglais.
+        *Please describe **one** point per issue. Answer in French or English.*
+
+        ⚠️ Faille de sécurité : **ne pas ouvrir d'issue** → voir [SECURITY.md](../SECURITY.md).
+        *Security vulnerability: **do not open an issue** → see [SECURITY.md](../SECURITY.md).*
+
+  - type: dropdown
+    id: ecran
+    attributes:
+      label: "Écran ou étape / Screen or step"
+      description: "Où le problème apparaît-il ? / Where does the problem appear?"
+      options:
+        - "Tableau de bord marchand / Merchant dashboard"
+        - "Billet — création et détail / Ticket — create and detail"
+        - "Paramètres / Settings"
+        - "Paiement sécurisé / Secure payment"
+        - "Paiement validé / Payment confirmed"
+        - "Confirmation de réception / Delivery confirmation"
+        - "Litige et signalement / Dispute and report"
+        - "Autre / Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: etapes
+    attributes:
+      label: "Ce que j'ai fait / What I did"
+      description: "Étapes numérotées. / Numbered steps."
+      placeholder: |
+        1. Ouvrir « Paramètres »
+        2. Appuyer sur « Modifier le numéro »
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: observe
+    attributes:
+      label: "Résultat observé / Observed result"
+      description: "Ce qui se passe réellement. / What actually happens."
+    validations:
+      required: true
+
+  - type: textarea
+    id: attendu
+    attributes:
+      label: "Résultat attendu / Expected result"
+      description: "Et pourquoi, du point de vue de l'acheteur ou du vendeur. / And why, from the buyer's or seller's point of view."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: "Impact / Impact"
+      options:
+        - "Bloquant — impossible de terminer le parcours / Blocking — cannot finish the flow"
+        - "Gênant — compréhension ou confiance dégradées / Annoying — clarity or trust affected"
+        - "Mineur — finition / Minor — polish"
+        - "Suggestion — pas un défaut / Suggestion — not a defect"
+    validations:
+      required: true
+
+  - type: input
+    id: contexte
+    attributes:
+      label: "Appareil, navigateur, langue / Device, browser, language"
+      placeholder: "Android 14 · Chrome 131 · FR"
+    validations:
+      required: true
+
+  - type: textarea
+    id: capture
+    attributes:
+      label: "Capture (facultative) / Screenshot (optional)"
+      description: "Glissez une image ici. Aucune donnée personnelle réelle. / Drag an image here. No real personal data."
+      placeholder: "Une capture annotée aide beaucoup. / An annotated screenshot helps a lot."
+
+  - type: checkboxes
+    id: regles
+    attributes:
+      label: "Avant d'envoyer / Before submitting"
+      options:
+        - label: "Je n'ai inclus ni donnée personnelle réelle, ni secret, ni code de `WOGO-Origin`. / I included no real personal data, secret or `WOGO-Origin` code."
+          required: true
+        - label: "Ce n'est pas un problème de sécurité. / This is not a security issue."
+          required: true

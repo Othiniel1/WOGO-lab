@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Sécurité — signalement privé / Security — private report"
+    url: "https://github.com/Othiniel1/WOGO-lab/security/advisories/new"
+    about: "Faille ou vulnérabilité : canal privé uniquement, jamais une issue publique. / Vulnerability: private channel only, never a public issue."
+  - name: "Lire les règles de contribution / Read the contribution rules"
+    url: "https://github.com/Othiniel1/WOGO-lab/blob/main/CONTRIBUTING.md"
+    about: "Ce qu'un bon retour contient, et ce qu'il ne doit pas contenir. / What a good report contains, and what it must not."
